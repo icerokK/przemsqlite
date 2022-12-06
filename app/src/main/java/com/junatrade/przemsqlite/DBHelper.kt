@@ -15,7 +15,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         // along with their data types is given
         val query = ("CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY, " +
-                NAME_COl + " TEXT," +
+                NAME_COL + " TEXT," +
                 AGE_COL + " TEXT" + ")")
 
         // we are calling sqlite
@@ -38,7 +38,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
         // we are inserting our values
         // in the form of key-value pair
-        values.put(NAME_COl, name)
+        values.put(NAME_COL, name)
         values.put(AGE_COL, age)
 
         // here we are creating a
@@ -86,7 +86,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         val ID_COL = "id"
 
         // below is the variable for name column
-        val NAME_COl = "name"
+        val NAME_COL = "name"
 
         // below is the variable for age column
         val AGE_COL = "age"

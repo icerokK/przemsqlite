@@ -51,18 +51,19 @@ class MainActivity : AppCompatActivity() {
             // and add to name text view
             val cursor = db.getName()
 
-            // moving the cursor to first position and
-            // appending value in the text view
             Name.text = ""
             Age.text = ""
+
+            // moving cursor to the first position and
+            // appending value in the text view
             cursor!!.moveToFirst()
-            Name.append(cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl)) + "\n")
+            Name.append(cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COL)) + "\n")
             Age.append(cursor.getString(cursor.getColumnIndex(DBHelper.AGE_COL)) + "\n")
 
             // moving our cursor to next
             // position and appending values
             while(cursor.moveToNext()){
-                Name.append(cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl)) + "\n")
+                Name.append(cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COL)) + "\n")
                 Age.append(cursor.getString(cursor.getColumnIndex(DBHelper.AGE_COL)) + "\n")
             }
 
