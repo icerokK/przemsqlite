@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             db.addName(name, age)
 
             // Toast to message on the screen
-            Toast.makeText(this, name + " added to database", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "$name added to database", Toast.LENGTH_LONG).show()
 
             // at last, clearing edit texts
             enterName.text.clear()
